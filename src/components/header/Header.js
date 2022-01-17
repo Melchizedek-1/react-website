@@ -1,15 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import "./Header.css";
 import  phoneHeader from "../../assets/phone-header-bg.png"
 import Button from '../UI/button/Button';
 import "../UI/button/Button.css";
 import { BsMouse } from "react-icons/bs";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Header = () => {
+
+    useEffect (() => {
+        AOS.init({
+            duration: 1000,
+        });
+    }, []);
+
     return (
         <section id='header'>
             <div className='container header'>
-                <div className='header-left'>
+                <div className='header-left' data-aos='fade-right'>
                     <h1>
                         <span>THE WORLD'S LEADING</span>
                         <span>CROSS-PLATFORM SECURE</span>
@@ -22,7 +31,7 @@ const Header = () => {
                     </div>
                 </div>
                 
-                <div className='header-right'>
+                <div className='header-right' data-aos='fade-left'>
                     <img src={phoneHeader} alt="phone" />
                 </div>
             </div>
