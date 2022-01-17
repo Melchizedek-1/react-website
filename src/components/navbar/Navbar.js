@@ -3,6 +3,8 @@ import "./Navbar.css";
 import { SiAnaconda } from "react-icons/si";
 import { AiOutlineBars } from "react-icons/ai";
 import { RiCloseLine } from "react-icons/ri";
+import Button from '../UI/button/Button';
+import "../UI/button/Button.css"
 
 const Navbar = () => {
 
@@ -26,7 +28,8 @@ const Navbar = () => {
                     <li><a href='#'>Features</a></li>
                     <li><a href='#'>Download</a></li>
                     <li><a href='#'>Subscribe</a></li>
-                    <li className='nav-btn'><a href='#' className='btn btn-dark'>Get Started</a></li>
+                    {/* <li className='nav-btn'><a href='#' className='btn btn-dark'>Get Started</a></li> */}
+                    <li className='nav-btn'><Button text={"Get Started"} btnClass={"btn-dark"} href={"#faq"} /></li>
                 </ul>
             </menu>
              <div className='menu-icons' onClick={toggleMenu}>
