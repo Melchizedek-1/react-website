@@ -75,5 +75,5 @@ section {
   width: 50%;
   min-width: 40rem;
   margin: 0 auto;
-  color: var(--dark-text);
+  /* color: var(--dark-text); */
 }
